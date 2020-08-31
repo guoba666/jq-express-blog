@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery.min.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script src="js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="css/common.css" />
+		<script src="js/navjs.js"></script>
+		<link rel="stylesheet" href="css/post.css" />
+		<script src="js/post.js"></script>
+	</head>
+	<body>
+		<div id="nav"></div>
+		<div name="operator-successInfo">
+			<span class="glyphicon glyphicon-ok-sign"></span>
+		</div>
+		<div name="operator-failInfo">
+			<span class="glyphicon glyphicon-remove-sign"></span>
+		</div>
+		<div class="container" name="flex-box">
+			<div id="topDiv">
+				<h3>发帖</h3>
+				<div class="topDiv-btn">
+					<button id="saveContent-btn">保存草稿</button>
+					<button id="post-btn">发布</button>
+					<button id="clearAllContent-btn">清空</button>
+				</div>
+			</div>
+			<div id="underDiv">
+				<div id="leftDiv">
+					<div class="editor-div">
+						<div class="title-input">
+							<input  id="editHead-input" type="text" placeholder="请输入标题" maxlength="54"/>
+							<p class="byte-limit">
+								<span class="limit-word">0</span>
+								<span class="limit-split">/</span>
+								<span class="limit-total">54</span>
+							</p>
+						</div>
+						<div class="content-input">
+							<div id="edit-tool-div">
+								<button title="添加标题">
+									<span class="glyphicon glyphicon-header"></span>
+								</button>
+								<button title="加粗">
+									<span class="glyphicon glyphicon-bold"></span>
+								</button>
+								<button title="添加链接">
+									<span class="glyphicon glyphicon-link"></span>
+								</button>
+								<div id="addLink-div" class="tool-litleDiv">
+									<input type="text" placeholder="链接文字" name="hrefName"/>
+									<input type="text" placeholder="http://..." name="hrefAddress"/>
+									<button id="insert-btn">插入</button>
+								</div>
+								<button title="上传图片">
+									<span class="glyphicon glyphicon-picture"></span>
+									<input type="file" id="addPicture-input"/>
+								</button>
+								
+							</div>
+							<div id="edit-area" contenteditable="true">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="rightDiv">
+					<div class="img-div">
+						<img src="" />
+					</div>
+					<h3 community-cid="1"></h3>
+				</div>
+			</div>
+		</div>
+	</body>
+<script>
+	$("div#nav").load("html/nav.html");
+</script>
+</html>

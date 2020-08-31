@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <!-- Bootstrap Styles-->
+    <link href="css/datacss/bootstrap.css" rel="stylesheet" />
+    <!-- FontAwesome Styles-->
+    <link href="https://cdn.bootcss.com/font-awesome/5.10.0-11/css/all.min.css" rel="stylesheet">
+    <!-- Morris Chart Styles-->
+    <link href="css/datacss/morris-0.4.3.min.css" rel="stylesheet" />
+    <!-- Custom Styles-->
+    <link href="css/datacss/custom-styles.css" rel="stylesheet" />
+    <!-- Google Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <link href="css/datacss/style.css" rel="stylesheet" />
+</head>
+<style>
+    .panel-primary{
+        border-color:white !important;
+    }
+</style>
+<body>
+<div id="nav"></div>
+<div class="all">
+    <!--
+    <nav class="navbar-default navbar-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul class="nav" id="main-menu">
+            <li><img src="imgs/74453.jpg"></li>
+            <li>锅巴</li>
+            <li><strong>游戏列表</strong></li>
+            <li><strong><a href="">社区</a></strong></li>
+            <li><strong><a href="">我要发帖</a></strong></li>
+            <li><strong><a href="">个人中心</a></strong></li>
+
+        </ul>
+    </div>
+    -->
+    </nav>
+        <div id="page-wrapper">
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-header">
+                            数据统计<small>Summary of your App</small>
+                        </h1>
+						<ol class="breadcrumb">
+                          <li><a href="#">关于我们</a></li>
+                          <li class="active">数据</li>
+                        </ol>
+                    </div>
+                </div>
+				
+				
+                <!-- /. ROW  -->
+                <div class="tlinks">Collect from <a href="http://www.cssmoban.com/" >网页模板</a></div>
+
+                <div class="row">
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel panel-primary text-center no-boder bg-color-green green">
+                            <div class="panel-left pull-left green">
+                                <i class="fa fa-eye fa-5x"></i>
+                            </div>
+                            <div class="panel-right">
+								<h3>86</h3>
+                               <strong>每日访客人数</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel panel-primary text-center no-boder bg-color-blue">
+                              <div class="panel-left pull-left blue">
+                                  <i class="fa fa-shopping-cart fa-5x"></i>
+                              </div>
+                              <div class="panel-right">
+                                  <h3>47 </h3>
+                              <strong>销售量</strong>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel panel-primary text-center no-boder bg-color-red">
+                            <div class="panel-left pull-left red">
+                                <i class="fa fa fa-comments fa-5x"></i>
+                            </div>
+                            <div class="panel-right">
+							 <h3>123 </h3>
+                               <strong> 互动人数 </strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="panel panel-primary text-center no-boder bg-color-brown">
+                            <div class="panel-left pull-left brown">
+                                <i class="fa fa-users fa-5x"></i>
+                            </div>
+                            <div class="panel-right">
+							<h3>477 </h3>
+                             <strong>一周访问总数</strong>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+		<div class="row">
+			<div class="col-xs-6 col-md-3">
+				<div class="panel panel-default">
+					<div class="panel-body easypiechart-panel">
+						<h4>Customers</h4>
+						<div class="easypiechart" id="easypiechart-blue" data-percent="82" ><span class="percent">82%</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<div class="panel panel-default">
+					<div class="panel-body easypiechart-panel">
+						<h4>Sales</h4>
+						<div class="easypiechart" id="easypiechart-orange" data-percent="55" ><span class="percent">55%</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<div class="panel panel-default">
+					<div class="panel-body easypiechart-panel">
+						<h4>Profits</h4>
+						<div class="easypiechart" id="easypiechart-teal" data-percent="84" ><span class="percent">84%</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-6 col-md-3">
+				<div class="panel panel-default">
+					<div class="panel-body easypiechart-panel">
+						<h4>No. of Visits</h4>
+						<div class="easypiechart" id="easypiechart-red" data-percent="46" ><span class="percent">46%</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--/.row-->
+
+                <div class="tabCon">
+                    <div class="tabBox">
+                        <div class="tabList">
+                            <div id="chart1" style="width: 70%;height: 650px;left: 10%;"></div>
+<!--                            <ul class="statistics">-->
+<!--                                <li>-->
+<!--                                    <div class="model">18</div>-->
+<!--                                    <span>未到（人）</span>-->
+<!--                                </li>-->
+<!--                                <li>-->
+<!--                                    <div class="model">189</div>-->
+<!--                                    <span>已到（人）</span>-->
+<!--                                </li>-->
+<!--                            </ul>-->
+                        </div>
+                        <div class="tabList">
+                            <div class="shijian">
+                                <span></span>
+                                <div class="timeyear">2019</div>
+                            </div>
+                            <div id="chart2" style="width: 85%;height: 250px;left: 5%;"></div>
+
+                        </div>
+                        <div class="tabList">
+
+                            <div id="chart3" style="width: 85%;height: 250px;left: 5%;"></div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+				<div class="row">
+				<div class="col-md-12">
+				
+					</div>		
+				</div>
+            </div>
+            <!-- /. PAGE INNER  -->
+        </div>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+</div>
+    <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+    <!-- jQuery Js -->
+    <script src="js/datajs/jquery-1.10.2.js"></script>
+    <!-- Bootstrap Js -->
+    <script src="js/datajs/bootstrap.min.js"></script>
+    <!-- Metis Menu Js -->
+    <script src="js/datajs/jquery.metisMenu.js"></script>
+    <!-- Morris Chart Js -->
+    <script src="js/datajs/morris/raphael-2.1.0.min.js"></script>
+    <script src="js/datajs/morris/morris.js"></script>
+	<script src="js/datajs/easypiechart.js"></script>
+	<script src="js/datajs/easypiechart-data.js"></script>
+	 <script src="js/datajs/Lightweight-Chart/jquery.chart.js"></script>
+    <script src="js/datajs/custom-scripts.js"></script>
+
+
+        <script src="js/datajs/echarts.min.js"></script>
+        <script src="js/datajs/echarts.common.min.js"></script>
+        <script src="js/datajs/chart1.js"></script>
+        <script src="js/datajs/chart2.js"></script>
+        <script src="js/datajs/chart3.js"></script>
+        <script charset="utf-8">
+            $("div#nav").load("html/nav.html");
+            window.onload = function (){
+                var windowWidth = document.body.clientWidth; //window 宽度;
+                var wrap = document.getElementById('wrap');
+                var tabClick = wrap.querySelectorAll('.tabClick')[0];
+                var tabLi = tabClick.getElementsByTagName('li');
+
+                var tabBox =  wrap.querySelectorAll('.tabBox')[0];
+                var tabList = tabBox.querySelectorAll('.tabList');
+
+                var lineBorder = wrap.querySelectorAll('.lineBorder')[0];
+                var lineDiv = lineBorder.querySelectorAll('.lineDiv')[0];
+
+                var tar = 0;
+                var endX = 0;
+                var dist = 0;
+
+                tabBox.style.overflow='hidden';
+                tabBox.style.position='relative';
+                tabBox.style.width=windowWidth*tabList.length+"px";
+
+                for(var i = 0 ;i<tabLi.length; i++ ){
+                    tabList[i].style.width=windowWidth+"px";
+                    tabList[i].style.float='left';
+                    tabList[i].style.float='left';
+                    tabList[i].style.padding='0';
+                    tabList[i].style.margin='0';
+                    tabList[i].style.verticalAlign='top';
+                    tabList[i].style.display='table-cell';
+                }
+
+                for(var i = 0 ;i<tabLi.length; i++ ){
+                    tabLi[i].start = i;
+                    tabLi[i].onclick = function(){
+                        var star = this.start;
+                        for(var i = 0 ;i<tabLi.length; i++ ){
+                            tabLi[i].className='';
+                        };
+                        tabLi[star].className='active';
+                        init.lineAnme(lineDiv,windowWidth/tabLi.length*star)
+                        init.translate(tabBox,windowWidth,star);
+                        endX= -star*windowWidth;
+                    }
+                }
+
+                function OnTab(star){
+                    if(star<0){
+                        star=0;
+                    }else if(star>=tabLi.length){
+                        star=tabLi.length-1
+                    }
+                    for(var i = 0 ;i<tabLi.length; i++ ){
+                        tabLi[i].className='';
+                    };
+
+                    tabLi[star].className='active';
+                    init.translate(tabBox,windowWidth,star);
+                    endX= -star*windowWidth;
+                };
+
+                tabBox.addEventListener('touchstart',chstart,false);
+                tabBox.addEventListener('touchmove',chmove,false);
+                tabBox.addEventListener('touchend',chend,false);
+                //按下
+                function chstart(ev){
+                    ev.preventDefault;
+                    var touch = ev.touches[0];
+                    tar=touch.pageX;
+                    tabBox.style.webkitTransition='all 0s ease-in-out';
+                    tabBox.style.transition='all 0s ease-in-out';
+                };
+                //滑动
+                function chmove(ev){
+                    var stars = wrap.querySelector('.active').start;
+                    ev.preventDefault;
+                    var touch = ev.touches[0];
+                    var distance = touch.pageX-tar;
+                    dist = distance;
+                    init.touchs(tabBox,windowWidth,tar,distance,endX);
+                    init.lineAnme(lineDiv,-dist/tabLi.length-endX/4);
+                };
+                //离开
+                function chend(ev){
+                    var str= tabBox.style.transform;
+                    var strs = JSON.stringify(str.split(",",1));
+                    endX = Number(strs.substr(14,strs.length-18));
+
+                    if(endX>0){
+                        init.back(tabBox,windowWidth,tar,0,0,0.3);
+                        endX=0
+                    }else if(endX<-windowWidth*tabList.length+windowWidth){
+                        endX=-windowWidth*tabList.length+windowWidth
+                        init.back(tabBox,windowWidth,tar,0,endX,0.3);
+                    }else if(dist<-windowWidth/3){
+                        OnTab(tabClick.querySelector('.active').start+1);
+                        init.back(tabBox,windowWidth,tar,0,endX,0.3);
+                    }else if(dist>windowWidth/3){
+                        OnTab(tabClick.querySelector('.active').start-1);
+                    }else{
+                        OnTab(tabClick.querySelector('.active').start);
+                    }
+                    var stars = wrap.querySelector('.active').start;
+                    init.lineAnme(lineDiv,stars*windowWidth/3);
+                    // init.lineAnme(lineDiv,stars*windowWidth/4);
+                };
+            };
+
+            var init={
+                translate:function(obj,windowWidth,star){
+                    obj.style.webkitTransform='translate3d('+-star*windowWidth+'px,0,0)';
+                    obj.style.transform='translate3d('+-star*windowWidth+',0,0)px';
+                    obj.style.webkitTransition='all 0.3s ease-in-out';
+                    obj.style.transition='all 0.3s ease-in-out';
+                },
+                touchs:function(obj,windowWidth,tar,distance,endX){
+                    obj.style.webkitTransform='translate3d('+(distance+endX)+'px,0,0)';
+                    obj.style.transform='translate3d('+(distance+endX)+',0,0)px';
+                },
+                lineAnme:function(obj,stance){
+                    obj.style.webkitTransform='translate3d('+stance+'px,0,0)';
+                    obj.style.transform='translate3d('+stance+'px,0,0)';
+                    obj.style.webkitTransition='all 0.1s ease-in-out';
+                    obj.style.transition='all 0.1s ease-in-out';
+                },
+                back:function(obj,windowWidth,tar,distance,endX,time){
+                    obj.style.webkitTransform='translate3d('+(distance+endX)+'px,0,0)';
+                    obj.style.transform='translate3d('+(distance+endX)+',0,0)px';
+                    obj.style.webkitTransition='all '+time+'s ease-in-out';
+                    obj.style.transition='all '+time+'s ease-in-out';
+                },
+            }
+        </script>
+</body>
+</html>

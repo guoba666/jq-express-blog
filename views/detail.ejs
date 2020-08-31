@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/common.css" />
+    <script src="js/navjs.js"></script>
+    <link rel="stylesheet" href="css/detail.css" />
+    <script src="js/detail.js"></script>
+</head>
+<body>
+<div id="nav"></div>
+<div name="operator-successInfo">
+    <span class="glyphicon glyphicon-ok-sign"></span>
+</div>
+<div name="operator-failInfo">
+    <span class="glyphicon glyphicon-remove-sign"></span>
+</div>
+<div class="container" name="flex-box">
+    <div id="topDiv">
+    </div>
+    <div id="underDiv">
+        <div id="centerDiv">
+            <div class="detail-title" cid="<%=news.newId%>">
+                <h3>帖子详情</h3>
+                <button class="detail-title-btn" id="detail-title-btn-more">
+                    <span>更多</span>
+                </button>
+                <%if(news.isCollect==0){%>
+                <button class="detail-title-btn" id="detail-title-btn-love">
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                    <span>收藏</span>
+                </button>
+                <%}else{%>
+                <button class="detail-title-btn" id="detail-title-btn-love" style="background-color:#FFCC00;">
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span>已收藏</span>
+                </button>
+                <%}%>
+
+
+                <button class="detail-title-btn" id="detail-title-btn-comment">
+                    <span class="glyphicon glyphicon-comment"></span>
+                    <span>回帖</span>
+                </button>
+            </div>
+            <div class="detail-author">
+                <img name="userhead" src="userHead/<%=news.src%>.jpg" />
+                <div class="info-div">
+                    <h5><%=news.username%></h5>
+                    <span>1楼 <%=news.postTime%></span>
+                </div>
+                <%if(news.isFollow==1){%>
+                    <button id="follow-btn" style="background-color:#D8D8D8">
+                        <span class="glyphicon glyphicon-ok followed"></span>
+                        <span>已关注</span>
+                    </button>
+                <%}else{%>
+                    <button id="follow-btn">
+                        <span class="glyphicon-sm glyphicon-plus"></span>
+                        <span>关注</span>
+                    </button>
+                <%}%>
+            </div>
+            <div class="detail-content">
+                <h3><%=news.head%></h3>
+                <%-news.content%>
+            </div>
+            <div class="detail-footer">
+                <button id="detail-footer-up-btn">
+                    <span class="glyphicon glyphicon-thumbs-up"></span>
+                    <span>赞</span>
+                    <span id="thumbs-upCount"><%=news.likeCount%></span>
+                </button>
+                <button id="detail-footer-down-btn" name="detail-footer-down-btn" class="detail-footer-down-btn">
+                    <span class="glyphicon glyphicon-thumbs-down"></span>
+                </button>
+            </div>
+
+            <div class="commentDisplay-area">
+                <h3>评论</h3>
+                <div class="display-wrapper">
+                    <ul class="dislist">
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="commentEdit-area">
+                <div id="commentEdit-area-img">
+                    <img name="userhead" id="commentEdit-area-userHead">
+                </div>
+                <div id="commentEdit-area-content" name="commentEdit-area-content">
+                    <h5></h5>
+                    <div id="commentEdit-area-content-bottom">
+                        <div id="content-area" contenteditable="true">
+
+                        </div>
+                        <div id="commentEdit-tool">
+                            <div id="commentUpload-wrapper">
+                                <span class="glyphicon glyphicon-picture" id="comment-uploadPic-btn"></span>
+                                <input type="file" name="comment-upload" style="display:none;"/>
+                            </div>
+                            <button id="commentSend-btn">发送</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    $("div#nav").load("html/nav.html");
+</script>
+</html>

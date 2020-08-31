@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>社区论坛</title>
+		<script src="js/jquery.min.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script src="js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="css/common.css" />
+		<script src="js/navjs.js"></script>
+		<link rel="stylesheet" href="css/community.css" />
+		<script src="js/community.js"></script>
+	</head>
+	<body>
+		<div id="nav"></div>
+		<script>
+			$("div#nav").load("html/nav.html");
+		</script>
+		<div class="container" name="flex-box" style="position:relative;">
+			<div id="topDiv">
+				<h3>社区</h3>
+			</div>
+			<div id="underDiv">
+				<div id="leftDiv">
+					<ul class="list">
+						<!--
+						<li>
+							<div class="replyIcon-div">
+								<p name="icon">22</p>
+							</div>
+							<div class="contentInfo-div">
+								<h3>
+									<span class="title">这里是社区</span>
+									<p>
+										之前刚出的时候貌似免费领貌似免费领貌似免费领，领的是不是试玩版啊？[cube_黑人问号][cube_闭嘴][cube_闭嘴]
+									</p>
+								</h3>
+							</div>
+							<div class="sendInfo-div">
+								<h4>
+									<img src="img/guoba.jpg" />
+									<span>锅巴</span>
+								</h4>
+								<span>1小时前·16攒</span>
+							</div>
+						</li>
+						<li>
+							<div class="replyIcon-div">
+								<p name="icon">22</p>
+							</div>
+							<div class="contentInfo-div">
+								<h3>
+									<span class="title">这里是社区</span>
+									<p>
+										之前刚出的时候貌似免费领，领的是不是试玩版啊？[cube_黑人问号][cube_闭嘴][cube_闭嘴]
+									</p>
+								</h3>
+							</div>
+							<div class="sendInfo-div">
+								<h4>
+									<img src="img/guoba.jpg" />
+									<span>锅巴</span>
+								</h4>
+								<span>1小时前·16攒</span>
+							</div>
+						</li>
+						-->
+					</ul>
+				</div>
+				<div id="rightDiv">
+					<div class="img-div">
+						<img src="" />
+					</div>
+					<h3 community-cid="1"></h3>
+					<div class="btn-div">
+						<button name="subscribe" class="rightDiv-btn">
+							<span class="glyphicon glyphicon-plus"></span>
+							<span>订阅</span>
+						</button>
+						<button name="post" class="rightDiv-btn">
+							<span class="glyphicon glyphicon-edit"></span>
+							<span>发帖</span>
+						</button>
+					</div>
+					<button id="changeCom-btn" class="rightDiv-btn">去别的社区逛逛？</button>
+				</div>
+			</div>
+			<!--选择社区-->
+			<div class="choiceCom_wrapper">
+				<h4 style="text-align: center;font-weight: bold;padding:15px 0px;">选择您要浏览的社区</h4>
+				<div class="part_wrapper">
+					<input id="item1" type="radio" name="select_com" value="1">
+					<label for="item1"></label>
+					<span>命运2</span>
+				</div>
+				<div class="part_wrapper">
+					<input id="item2" type="radio" name="select_com" value="2">
+					<label for="item2"></label>
+					<span>Apex</span>
+				</div>
+				<div class="part_wrapper">
+					<input id="item3" type="radio" name="select_com" value="3">
+					<label for="item3"></label>
+					<span>战双帕米什</span>
+				</div>
+				<button>确定</button>
+			</div>
+		</div>
+
+	</body>
+
+</html>

@@ -1,0 +1,38 @@
+div.all{
+    height:1000px;
+}
+.sidebar-collapse{
+    background-color: black;
+    height:100%;
+    margin-top:-80px;
+}
+nav.navbar-default.navbar-side{
+    height:100%;
+}
+ul#main-menu{
+    height:100%;
+}
+.sidebar-collapse ul{
+    text-align: center;
+
+}
+.sidebar-collapse img{
+    height: 80px;
+    width: 80px;
+    border-radius: 80px;
+}
+.sidebar-collapse li a{
+    color:white !important;
+    text-decoration: none;
+}
+.sidebar-collapse li{
+    margin-top: 30px;
+    font-size: 20px;
+    color: whitesmoke;
+    margin-bottom: 40px;
+
+    text-decoration: none;
+}
+.sidebar-collapse p{
+    color:white;
+}

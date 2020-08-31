@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>2</title>
+		<link rel="stylesheet" type="text/css" href="yt/zs-css.css"/>
+		<script src="yt/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#li01").mouseover(function(){
+					$(this).find("p").show(1000);
+				});
+				$("#li01").mouseleave(function(){
+					$(this).find("p").hide(1000);	
+				});
+				$("#li01").click(function(){
+					$("#li1-div").show(); 
+					$("#div04").css("opacity","0.85");
+					$("#zs2header").css({"background-color":"black","opacity":"0.85"});
+				});
+				$("#imgcommon").click(function(){
+					$("#li1-div").hide();	
+					$("#div04").css("opacity","1");
+					$("#zs2header").css({"background-color":"darkred","opacity":"0.85"});
+				});
+				
+				$("#li02").mouseover(function(){
+					$(this).find("p").show(1000);	
+				});
+				$("#li02").mouseleave(function(){
+					$(this).find("p").hide(1000);	
+				});
+				$("#li02").click(function(){
+					$("#li2-div").show();
+				    $("#div04").css("opacity","0.85");
+					$("#zs2header").css({"background-color":"black","opacity":"0.85"});
+				});
+				$("#imgcommon2").click(function(){
+					$("#li2-div").hide();	
+					$("#div04").css("opacity","1");
+					$("#zs2header").css({"background-color":"darkred","opacity":"0.85"});
+				});
+				
+				$("#li03").mouseover(function(){
+					$(this).find("p").show(1000);	
+				});
+				$("#li03").mouseleave(function(){
+					$(this).find("p").hide(1000);	
+				});
+				$("#li03").click(function(){
+					$("#li3-div").show();		
+					$("#div04").css("opacity","0.85");
+					$("#zs2header").css({"background-color":"black","opacity":"0.85"});
+				});
+				$("#imgcommon3").click(function(){
+					$("#li3-div").hide();	
+					$("#div04").css("opacity","1");
+					$("#zs2header").css({"background-color":"darkred","opacity":"0.85"});
+				});
+				
+				$("#li04").mouseover(function(){
+					$(this).find("p").show(1000);	
+				});
+				$("#li04").mouseleave(function(){
+					$(this).find("p").hide(1000);	
+				});
+				$("#li04").click(function(){
+					$("#li4-div").show();		
+					$("#div04").css("opacity","0.85");
+					$("#zs2header").css({"background-color":"black","opacity":"0.85"});
+				});
+				$("#imgcommon4").click(function(){
+					$("#li4-div").hide();	
+					$("#div04").css("opacity","1");
+					$("#zs2header").css({"background-color":"darkred","opacity":"0.85"});
+				});
+				
+				
+				$("#li05").mouseover(function(){
+					$(this).find("p").show(1000);	
+				});
+				$("#li05").mouseleave(function(){
+					$(this).find("p").hide(1000);	
+				});
+				$("#li05").click(function(){
+					$("#li5-div").show();		
+					$("#div04").css("opacity","0.85");
+					$("#zs2header").css({"background-color":"black","opacity":"0.85"});
+				});
+				$("#imgcommon5").click(function(){
+					$("#li5-div").hide();	
+					$("#div04").css("opacity","1");
+					$("#zs2header").css({"background-color":"darkred","opacity":"0.85"});
+				});
+				$("#zs2d02b").click(function(){
+					window.location.href="zs1";
+				})
+			});
+		</script>
+	</head>
+	
+	<body id="body2" >
+		<div id="zs2header">
+			<ul>
+				<li>角色介绍</li>
+			</ul>
+		</div>
+		<div id="div04">
+			<ul>
+				<li id="li01">
+				<img src="img/zs1.png" >
+				<p>七 实</p>
+				</li>
+				<li id="li02">
+				<img src="img/zs2.png" >
+				<p>比 安 卡</p>
+				</li>
+			    <li id="li03">
+				<img src="img/zs3.png" >
+				<p>露 西 亚</p>
+				</li>
+			    <li id="li04">
+				<img src="img/zs4.png" >
+				<p>丽 芙</p>
+				</li>
+				<li id="li05">
+				<img src="img/zs5.png" >
+				<p>里</p>
+				</li>	
+			</ul>
+				
+		</div>
+		<hr >
+		<!-- 角色详情 -->
+		<div id="li1-div" class="lidiv">
+			<img src="img/zs11.png" id="img0101" >
+			<img src="img/cha.png" id="imgcommon" class="imgcommon">
+			<p>所属部队不明，行踪也捉摸不定的神秘构造体。活泼热闹，有着独特的对话思路和品味，选择使用链锯作为武器并且以近乎玩耍的风格进行着战斗。声称观察人类是自己的最大爱好。</p>
+		</div>
+		<div id="li2-div" class="lidiv">
+			<img src="img/zs22.png" id="img0202">
+			<img src="img/cha.png" id="imgcommon2" class="imgcommon">
+			<p>清理部队长官，气质优雅，作风严谨的构造体，不仅拥有顶尖的对抗感染体的战斗技巧，也有着能够击杀叛逃构造体，甚至指挥官的高级权限。由于身份特殊，至今都鲜有人真正走进过她的内心世界。曾经有着一段作为修女的过去。</p>
+		</div>
+		<div id="li3-div" class="lidiv">
+			<img src="img/zs33.png" id="img0303">
+			<img src="img/cha.png" id="imgcommon3" class="imgcommon">
+			<p>灰鸦小队队长，个性认真执着，作为早期批次接受改造的军用型构造体，在漫长的战火中淬炼出了强大的实力与坚定的意志。如今与指挥官在战斗中的无间默契，被作为典范广为流传于战场。然而在她时常有些异样的回忆中，似乎埋藏了一段十分关键的过去。</p>
+		</div>
+		<div id="li4-div" class="lidiv">
+			<img src="img/zs44.png" id="img0404">
+			<img src="img/cha.png" id="imgcommon4" class="imgcommon">
+			<p>灰鸦小队队员，出身自生命之星医疗共同体，举止礼貌，善解人意，与稍显柔弱的外表不同，意外地能够承受许多超乎常人的压力。作为最新的辅助型构造体，为团队提供着关键性的支援力量。在这个战火纷飞的时代中，她的心底一直保持着一个非常纯真的梦想。</p>
+		</div>
+		<div id="li5-div" class="lidiv">
+			<img src="img/zs55.png" id="img0505">
+			<img src="img/cha.png" id="imgcommon5" class="imgcommon">
+			<p>灰鸦小队队员，出身自黑野特别行动组，有着丰富的机械相关知识和枪械使用经验。平日里给人冷淡和直言不讳的印象，但在冲突场合会主动庇护与自己亲近的人。与目前生活在空中花园的弟弟有一个约定。</p>
+		</div>
+		<!-- 闪烁按钮 -->
+		<div id="div02">
+			<img src="img/jiantou.png" alt class="zs2img" >
+		</div>
+		<!-- 按钮 -->
+		<div id="div02">	
+		    <center><input type="button" name="" id="zs2d02b" value="点我返回QAQ" /></center>
+		</div>
+		<!-- 后缀 -->
+		<div id="div03-1">
+			<center>
+				<p>本公司游戏产品适合16岁（含）以上玩家娱乐</p>
+				<p>抵制不良游戏 拒绝盗版游戏</p>
+				<p>注意自我保护 谨防受骗上当</p>
+				<p>适度游戏益脑 沉迷游戏伤身</p>
+				<p>合理安排时间 享受健康生活</p>
+				<p>邮箱：123456789@qq.com</p>
+			</center>
+		</div>
+
+	</body>
+</html>
+	

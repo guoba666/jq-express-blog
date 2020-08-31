@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="js/jquery.min.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/navjs.js"></script>
+		<link rel="stylesheet" href="css/admin.css" />
+		<script type="text/javascript" src="js/admin.js"></script>
+		<title>管理界面</title>
+	</head>
+	<body>
+		<div id="nav"></div>
+		<div class="container" name="flex-box">
+			<div id="topDiv">
+				<!-- 导航栏 -->
+				<nav class="navbar navbar-inverse" role="navigation">
+					<div class="container-fluid">
+				    <div class="navbar-header">
+				        <a class="navbar-brand" href="#">管理</a>
+				    </div>
+				    <div>
+				        <ul class="nav navbar-nav">
+				            <li id="1" class="active"><a href="#">用户列表</a></li>
+				            <li id="2" ><a  href="#">社区帖子</a></li>
+				        </ul>
+				    </div>
+					</div>
+				</nav>
+			</div>
+			
+			
+			<div id="underDiv">
+				<!-- 用户DIV -->
+				<!-- 禁封号 -->
+				<div id="cendiv">
+					<h2><strong>用户名单</strong></h2>
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<th style="text-align: center;">用户ID</th>
+								<th style="text-align: center;">昵称</th>
+								<th style="text-align: center;">密码</th>
+								<th style="text-align: center;">禁言时间</th>
+								<th style="text-align: center;">是否封号</th>
+								<th style="text-align: center;">操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- <tr>
+								<td>Tanmay</td>
+								<td>
+									<img src="img/loginbg.jpg">
+									Bangalore
+									</td>
+								<td>密码</td>
+								<td>
+									<button type="button">禁言</button>
+									<button type="button">封号</button>
+								</td>
+							</tr> -->
+						</tbody>
+					</table>
+				</div>
+				<!-- 用户帖子 -->
+				<div style="text-align: center; display: none;" id="leftDiv">
+					<h2><strong>用户帖子</strong></h2>
+					<ul class="list">
+					
+					</ul>
+				</div>
+				
+			</div>
+		</div>
+		
+		
+		<!-- 模拟框 -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+							&times;
+						</button>
+						<h4 class="modal-title" id="myModalLabel">
+							管理
+						</h4>
+					</div>
+					<div class="modal-body">
+						<h5>请输入禁言时长(天)</h5>
+						<div id="not_allow">
+							<input id="dateline" class="form-control" type="text">
+							<p style="display: none;" id="key_name"></p>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+						</button>
+						<button type="button" class="btn btn-primary"  data-dismiss="modal" id="set_date">
+							提交更改
+						</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal -->
+		</div>
+	</body>
+	<script>
+		$("div#nav").load("html/nav_admin.html");
+	</script>
+</html>

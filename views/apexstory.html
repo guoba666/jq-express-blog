@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>个人网页</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="../gstory/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../gstory/css/mystyle.css">
+	<script src="../gstory/js/jquery-3.3.1.min.js"></script>
+	<script src="../gstory/js/bootstrap.min.js"></script>
+	<script src="../gstory/js/myjs.js"></script>
+	<style type="text/css">
+		body{
+			background: url("../../gstory/img/bg2.jpg");
+		}
+	</style>
+</head>
+<body>
+	<div class="container-fluid" id="mynav">
+		<ul class="nav nav-pills">
+			<li class="nav-item">
+				<!-- “关于”下拉菜单 -->
+				<div class="dropdown" id="mydd" onmouseover="con_change('about-down-con')" onmouseout="con_recover('about-down-con')">
+					<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+						返回列表<span class="glyphicon glyphicon-chevron-down" style="font-size:15px;margin-left:5px;" id="about-down-con"></span>
+					</button>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropdownMenu_1_menu">
+						<div class="container">
+						<a class="dropdown-item" href="../../community">社区</a>
+						</div>
+						<div class="container">
+						<a class="dropdown-item" href="../../community">个人中心</a>
+						</div>
+						<div class="container">
+						<a class="dropdown-item" href="../../community">游戏背景</a>
+						</div>
+						<a class="dropdown-item" href="../../community">数据统计</a>
+					</div>
+				<div>
+			</li>	
+			<li class="nav-item">
+				<a id="apex-con" class="nav-link active" href="./apexhero">APEX英雄</a>
+			</li>
+		
+		</ul>
+	</div>
+	
+	<!-- 模态框（Modal） -->
+	
+	
+	<div class="container-fluid" id="bg1">
+		<img id="bg1" src="../gstory/img/allhero.png">
+	</div>
+	
+	<div class="container" id="hero-introduction">
+		<div class="row">
+			<div class="col-lg-6">
+				<img src="../gstory/img/t0.jpg">
+			</div>
+			<div class="col-lg-6" style="padding-left:100px;">
+				<h1>英雄</h1>
+				<h3>選擇各式匪徒、士兵、怪人與隱士，這些人各自擁有自己的技能。《Apex 英雄》歡迎所有來者－－生還夠久，大家就會稱你文英雄。</h3>
+				<a class="btn btn-danger btn-lg" type="button" href="./apexhero" id="check-hero">查看角色名单</a>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div class="container-fluid" id="mycon1">
+		<div class="container">
+			<h1>你的小隊</h1>
+			<h3 id="h3-1">挑選你的英雄並和其他玩家一起組隊，結合大家的獨特技能來形成終極小隊。<h3>
+		</div>
+		<div class="container" id="mycon2">
+			<div class="row">
+				<div class="col-lg-4">
+					<img src="../gstory/img/t1.jpg">
+					<h2>戰術大逃殺</h2>
+					<h3>你要是想在《Apex 英雄》中生還，你得懂得臨機應變。 掌握你傳奇的技能、臨場做出戰術抉擇，並在危險情況下善用你的小隊優勢，在激烈的 60 人比賽中佔上風。</h3>
+				</div>
+				<div class="col-lg-4">
+					<img src="../gstory/img/t2.jpg">
+					<h2>創意戰鬥</h2>
+					<h3>體驗最新型態的大逃殺遊戲，你將能夠使用重生訊號台來復活敵人、智慧型通訊來與人聯繫、智慧型道具欄來收集你需要的東西，還有包含跳傘長的全新動作跳傘方式。</h3>
+				</div>
+				<div class="col-lg-4">
+					<img src="../gstory/img/t3.jpg">
+					<h2>普通賽季</h2>
+					<h3>參與每個賽季來解鎖新英雄、新武器、主題戰利品和其他更多。</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+		
+	<div class="container-fluid" id="apex-hr">
+		<img src="../gstory/img/apex-hr.svg">
+	</div>
+	<!-- 背景图 -->
+	<div class="container-fluid" id="mycon">
+		<img src="../gstory/img/bg2.jpg" id="bg2">
+	</div>
+	<!-- 背景图 -->
+	
+	<div class="container" id="under-apex-hr">
+		<h1>充滿各種機會的世界</h1>
+		<h3>邊境戰爭結束了。IMC 與反抗軍在數十年的紛爭後，太空中的邊境終於恢復了平靜。</h3>
+		<h3>但是自由卻是有代價的：邊境的世界因戰火成了一片焦土，而當初保證的援助也不了了之。由於無法求生，那些所剩的人們被迫離開家鄉。而一些勇者前往了邊疆。</h3>
+		<h3>一些邊境遠方的偏僻星球群，邊疆並未遭戰火侵襲且充滿了資源與契機。但是人命在這裡卻一文不值，而危險也隱藏在各個角落。這裡的開拓者、探索者與匪徒們不停地爭鬥著，而且現在他們將透過 Apex 競賽來解決紛爭，這是一種血腥運動，而選手們為了金錢、名聲與榮耀來從邊境各處來到此處。</h3>
+	</div>
+	
+	<div class="container" id="head2">
+		<h1>探索更多</h1>
+	</div>
+	<div class="container" id="mycon3">
+		<div class="row">
+			<div class="col-lg-4">
+				<a href="#">
+					<img src="../gstory/img/t4.jpg" id="i1">
+					<h2>英雄</h2>
+				</a>
+			</div>
+			<div class="col-lg-4">
+				<a href="#">
+					<img src="../gstory/img/t5.jpg" id="i2">
+					<h2>新闻</h2>
+				</a>
+			</div>
+			<div class="col-lg-4">
+				<a href="#">
+					<img src="../gstory/img/t6.jpg" id="i3">
+					<h2>社区</h2>
+				</a>
+			</div>
+		</div>
+	</div>
+	
+
+</body>
+</html>

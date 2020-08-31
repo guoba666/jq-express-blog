@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="css\cblogin.css">
+    <script src="../routes/userdb.js"></script>
+</head>
+
+
+<body>
+    <div name="operator-successInfo">
+        <span class="glyphicon glyphicon-ok-sign"></span>
+    </div>
+    <div name="operator-failInfo">
+        <span class="glyphicon glyphicon-remove-sign"></span>
+    </div>
+    <div class="container">
+        <img style="height: 600px;width: 800px;" src="img/loginbg.jpg" alt="">
+        <div class="panel">
+            <div class="content login">
+                <div class="switch">
+                    <span id='login' class='active'>Login</span><span>/</span><span id='signup'>Sign Up</span>
+                </div>
+                <div id="form">
+					<!-- <div id='email' class="input"  placeholder='Email'><input type="text"></div> -->
+                    <div class="input" placeholder='Username'><input name="username" type="text"></div>
+                    <div class="input" placeholder='Password'><input name="pwd" type="password"></div>
+                    <span id="FOR">Forget?</span>
+                    <button id="login_btn">LOGIN</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    function getCookie(c_name)
+    {
+        if (document.cookie.length>0)
+        {
+            c_start=document.cookie.indexOf(c_name + "=")
+            if (c_start!=-1)
+            {
+                c_start=c_start + c_name.length+1
+                c_end=document.cookie.indexOf(";",c_start)
+                if (c_end==-1) c_end=document.cookie.length
+                return unescape(document.cookie.substring(c_start,c_end))
+            }
+        }
+        return ""
+    }
+
+    function setCookie(c_name,value,expiredays)
+    {
+        var exdate=new Date()
+        exdate.setDate(exdate.getDate()+expiredays)
+        document.cookie=c_name+ "=" +escape(value)+
+            ((expiredays==null) ? "" : ";expires="+exdate.toGMTString())
+    }
+
+    function delCookie(c_name)
+    {
+
+        document.cookie=c_name+ "=" +escape(getCookie(c_name))+
+            ";expires=expires=Fri, 31 Dec 1999 23:59:59 GMT";
+    }
+    //收藏等操作信息反馈
+    function successInfo(message){
+        $("div[name='operator-successInfo'] span").text(" "+message);
+        $("div[name='operator-successInfo']").addClass("active");
+        setTimeout(function(){
+            $("div[name='operator-successInfo']").removeClass("active");
+        },3000);
+    }
+    function failInfo(message){
+        $("div[name='operator-failInfo'] span").text(" "+message);
+        $("div[name='operator-failInfo']").addClass("active");
+        setTimeout(function(){
+            $("div[name='operator-failInfo']").removeClass("active");
+        },3000);
+    }
+    $('#login').click(function(){
+        $('.switch span').removeClass('active');
+        $(this).addClass('active'); 
+        $(this).parents('.content').removeClass('signup');
+        $(this).parents('.content').addClass('login');
+		$('#form button').remove();
+		var button=$("<button id=login_btn>LOGIN</button>");
+		$("#FOR").after(button);
+    })
+
+    $('#signup').click(function(){
+        $('.switch span').removeClass('active');
+        $(this).addClass('active');
+        $(this).parents('.content').removeClass('login');
+        $(this).parents('.content').addClass('signup');
+        $('#form button').remove();
+		var button=$("<button id=signup_btn>SIGNUP</button>");
+		$("#FOR").after(button);
+    })
+
+    $('.input input').on('focus',function(){
+        $(this).parent().addClass('focus');
+    })
+
+    $('.input input').on('blur',function(){
+        if($(this).val() === '')
+            $(this).parent().removeClass('focus');
+    })
+
+	$(document).on('click','#login_btn',function(){
+        $.ajax({
+            type:"post",
+            url:"users/checkLogin",
+            data:{
+                username:$(":text").val(),
+                pwd:$(":password").val()
+            },
+            dataType:"JSON",
+            success:function (data) {
+                if(data.message==1){
+                    var now=new Date();
+                    formatDateTime(now);
+                    // alert(checkTime(now.toString(),data.key.toString()));
+                    if(getdateyear(data.key,now.toString())<50){
+                        successInfo("登陆成功,即将跳转");
+                        setCookie("userHead",data.src,30);
+                        setCookie("username",data.username,30);
+                        setCookie("communityCid",1);
+                        setTimeout(function () {
+                            // if($("span#nav-username").text()!="admin"){
+                            //  $("a#admin-a").css("display","none");
+                            //  $("a#dataStatis-a").css("display","none");
+                            // }
+                            window.location="gamestory";
+                        },2000);
+                    }
+                    else{
+                        alert("您的账号已被封了");
+                    }
+                }else{
+                    failInfo("用户名或密码错误");
+                }
+            },
+            error:function () {
+                alert("提交失败");
+            }
+        })
+	});
+
+	$(document).on('click','#signup_btn',function(){
+        $.ajax({
+            type:"post",
+            url:"users/register",
+            data:{
+                username:$(":text").val(),
+                pwd:$(":password").val()
+            },
+            dataType:"JSON",
+            success:function (data) {
+                if(data==1){
+                    successInfo("注册成功");
+                }else{
+                    failInfo("用户已存在！");
+                }
+            },
+            error:function () {
+                alert("提交失败");
+            }
+        })
+	})
+	
+	$("div.input").click(function(){
+		$(this).find("input").focus();
+	})
+
+    // 格式化时间
+    function formatDateTime(date){
+        let y = date.getFullYear();
+        let m = date.getMonth() + 1;
+        m = m < 10 ? ('0' + m) : m;
+        let d = date.getDate();
+        d = d < 10 ? ('0' + d) : d;
+        let h = date.getHours();
+        h=h < 10 ? ('0' + h) : h;
+        let minute = date.getMinutes();
+        minute = minute < 10 ? ('0' + minute) : minute;
+        let second=date.getSeconds();
+        second=second < 10 ? ('0' + second) : second;
+        return y + '-' + m + '-' + d+' '+'00:00:00';
+    }
+    function getdateyear(date1,date2){
+        var date_1= new Date(Date.parse(date1.replace(/-/g,   "/")));
+        var date_2= new Date(Date.parse(date2.replace(/-/g,   "/")));
+        return date_1.getFullYear()-date_2.getFullYear();
+    }
+</script>
+</html>

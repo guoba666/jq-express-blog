@@ -1,0 +1,420 @@
+div[name='operator-successInfo']{
+	position: fixed;
+	width:270px;
+	height:30px;
+	left: 45%;
+	top:-32px;
+	background-color: #C9E2B3;
+	border-radius: 12px;
+	text-align: center;
+	line-height: 28px;
+	color:#00A600;
+	font-size: 16px;
+	transition: all 0.5s;
+	z-index: 2;
+}
+div[name='operator-failInfo']{
+	position: fixed;
+	width:270px;
+	height:30px;
+	left: 45%;
+	top:-32px;
+	background-color:darkgray;
+	border-radius: 12px;
+	text-align: center;
+	line-height: 28px;
+	color:red;
+	font-size: 16px;
+	transition: all 0.5s;
+}
+div[name^='operator-'].active{
+	top:20%;
+	transition: all 0.5s;
+}
+div#underDiv div#centerDiv{
+	width:850px;
+	margin: 0px auto;
+	box-sizing: border-box;
+}
+div#underDiv div#centerDiv div.detail-title{
+	width:100%;
+	height: 60px;
+	background-color: white;
+}
+div#underDiv div#centerDiv div.detail-title h3{
+	display: inline-block;
+	width:56%;
+	font-size: 20px;
+	font-weight: bold;
+	margin-left: 20px;
+}
+div#underDiv div#centerDiv div.detail-title button span{
+	font-weight: bold;
+	text-align: center;
+}
+div#underDiv div#centerDiv div.detail-title button#detail-title-btn-more{
+	width:100px;
+	height: 40px;
+	font-size: 15px;
+	cursor: pointer;
+	border-radius: 4px;
+	background-color: #f1f2f3;
+	color:black;
+	font-weight: bold;
+	margin-left:6px;
+	text-align: center;
+	opacity:0.8;
+}
+div#underDiv div#centerDiv div.detail-title button#detail-title-btn-love{
+	width:100px;
+	height: 40px;
+	font-size: 15px;
+	cursor: pointer;
+	border-radius: 4px;
+	background-color: #f1f2f3;
+	color:black;
+	font-weight: bold;
+	margin-left:6px;
+	text-align: center;
+	opacity:0.8;
+}
+div#underDiv div#centerDiv div.detail-title button#detail-title-btn-comment{
+	width:100px;
+	height: 40px;
+	font-size: 15px;
+	cursor: pointer;
+	border-radius: 4px;
+	background-color: #008ee8;
+	color:white;
+	font-weight: bold;
+	margin-left:6px;
+	text-align: center;
+	opacity:0.8;
+}
+div#underDiv div#centerDiv div.detail-title button#detail-title-btn-love:hover{
+	color:red;
+}
+div#underDiv div#centerDiv div.detail-title button#detail-title-btn-comment:hover{
+	opacity:1;
+}
+div#underDiv div#centerDiv div.detail-title button#detail-title-btn-more:hover{
+	opacity:1;
+}
+div#underDiv div#centerDiv div.detail-author{
+	width: 100%;
+	height:80px;
+	background-color: white;
+	padding-left:15px;
+	padding-top:10px;
+}
+img[name='userhead']{
+	display: inline-block;
+	width:50px;
+	border-radius: 50px;
+	vertical-align: text-bottom;
+}
+div#underDiv div#centerDiv div.detail-author div.info-div{
+	display: inline-block;
+	width:680px;
+	margin-left:8px;
+}
+div#underDiv div#centerDiv div.detail-author div.info-div h5{
+	font-size: 16px;
+}
+div#underDiv div#centerDiv div.detail-author div.info-div span{
+	display: block;
+	color:gray;
+	font-size: 14px;
+}
+div#underDiv div#centerDiv div.detail-author button#follow-btn{
+	width:66px;
+	height:28px;
+	border-radius: 4px;
+	vertical-align:text-bottom;
+	margin-bottom: 10px;
+	background-color: #f1f2f3;
+}
+div#underDiv div#centerDiv div.detail-author button#follow-btn span.glyphicon.glyphicon-ok.followed{
+	font-size: 9px;
+	vertical-align: text-top;
+}
+div#underDiv div#centerDiv div.detail-author button#follow-btn:hover{
+	color: #008ee8;
+}
+div#underDiv div#centerDiv div.detail-content{
+	box-sizing: border-box;
+	width:100%;
+	background-color: white;
+	padding:1px 50px;
+}
+div#underDiv div#centerDiv div.detail-content h3{
+	font-size: 22px;
+	font-weight: bold;
+	margin-bottom:25px;
+}
+div#underDiv div#centerDiv div.detail-footer{
+	width:100%;
+	height:70px;
+	background-color: white;
+	text-align: center;
+}
+div#underDiv div#centerDiv div.detail-footer button#detail-footer-up-btn{
+	width:80px;
+	height:40px;
+	border-radius: 8px;
+	margin-bottom: 10px;
+	background-color: #ebf5ff;
+	margin-top:12px;
+}
+div#underDiv div#centerDiv div.detail-footer button#detail-footer-up-btn span{
+	font-size: 16px;
+	color:#008EE8;
+}
+div#underDiv div#centerDiv div.detail-footer button.detail-footer-down-btn{
+	width:40px;
+	height:40px;
+	border-radius: 8px;
+	margin-bottom: 10px;
+	background-color: #ebf5ff;
+	margin-top:12px;
+	margin-left:12px;
+}
+div#underDiv div#centerDiv div.detail-footer button.detail-footer-down-btn.clicked{
+	background-color:#008EE8;
+}
+div#underDiv div#centerDiv div.detail-footer button#detail-footer-down-btn.clicked span.clicked{
+	color:white;
+}
+div#underDiv div#centerDiv div.detail-footer button#detail-footer-down-btn span{
+	font-size: 16px;
+	color:#008EE8;
+}
+div#underDiv div#centerDiv div.commentDisplay-area{
+	width:100%;
+	background-color: white;
+	margin-top:25px;
+}
+div#underDiv div#centerDiv div.commentDisplay-area h3{
+	display: inline-block;
+	width:56%;
+	font-size: 20px;
+	font-weight: bold;
+	margin-left: 20px;
+}
+div#underDiv div#centerDiv div.commentEdit-area{
+	width:100%;
+	height:250px;
+	background-color: white;
+	margin-top:25px;
+	box-sizing: border-box;
+	display: flex;
+	max-height: 500px;
+}
+div#underDiv div#centerDiv div.commentEdit-area div#commentEdit-area-img{
+	display: inline-block;
+	width:50px;
+	height:100%;
+	margin-left:15px;
+	padding-top:15px;
+
+}
+div#underDiv div#centerDiv div.commentEdit-area div#commentEdit-area-content{
+	display: inline-block;
+	width:750px;
+	height: 100%;
+	margin-left: 10px;
+	margin-top: 12px;
+}
+div#underDiv div#centerDiv div.commentEdit-area div#commentEdit-area-content-bottom{
+	width:100%;
+	height:200px;
+	border: 1px solid #F1F2F3;
+	border-radius: 8px;
+	max-height: 500px;
+}
+div#underDiv div#centerDiv div.commentEdit-area div#commentEdit-area-content div#content-area{
+	overflow: auto;
+	width:100%;
+	height:100px;
+	border-radius: 5px;
+	font-size: 16px;
+	padding: 8px 12px;
+	max-height: 400px;
+}
+div#commentEdit-tool{
+	width:100%;
+	height:100px;
+}
+div#commentEdit-tool div#commentUpload-wrapper{
+	display: inline-block;
+	width:600px;
+	padding-left: 25px;
+}
+div#commentEdit-tool span#comment-uploadPic-btn{
+	padding: 25px;
+	font-size: 35px;
+	color:gray;
+	margin:5px 10px;
+	background-color:#f1f2f3;
+	cursor: pointer;
+	opacity: 0.8;
+}
+div#commentEdit-tool span#comment-uploadPic-btn:hover{
+	opacity: 1;
+}
+button#commentSend-btn{
+	width:80px;
+	height: 40px;
+	font-size: 15px;
+	cursor: pointer;
+	border-radius: 4px;
+	background-color: #008ee8;
+	color:white;
+	font-weight: bold;
+	margin-left:6px;
+	text-align: center;
+	opacity: 0.8;
+}
+button#commentSend-btn:hover{
+	opacity: 1;
+}
+/*评论区*/
+div.display-wrapper{
+	width:100%;
+	margin-top:10px;
+	margin-left:12px;
+	box-sizing: border-box;
+}
+ul.dislist{
+	list-style: none;
+}
+ul.dislist li{
+	position: relative;
+	width:100%;
+	margin-bottom: 15px;
+}
+div.display-wrapper ul.dislist div.commentUserHead-warpper{
+	position: absolute;
+	display: inline-block;
+	width:50px;
+	top:-5px;
+	left: 5px;
+}
+div.display-wrapper ul.dislist div.commentUserHead-warpper img{
+	width:50px;
+	height:50px;
+	border-radius: 50%;
+}
+div.display-wrapper ul.dislist div.commentInfo-wrapper{
+	display: inline-block;
+	width:700px;
+	margin-left: 65px;
+	margin-top:-5px;
+	padding-bottom: 20px;
+}
+div.display-wrapper ul.dislist div.commentInfo-wrapper div.commentUserInfo-wrapper{
+	width:100%;
+	height:50px;
+	line-height:5px;
+}
+div.display-wrapper ul.dislist div.commentInfo-wrapper div.commentUserInfo-wrapper h5{
+	font-size: 14px;
+}
+div.display-wrapper ul.dislist div.commentInfo-wrapper div.commentUserInfo-wrapper span{
+	font-size: 13px;
+	color:gray;
+}
+div.display-wrapper ul.dislist div.commentInfo-wrapper div.commentContent-wrapper{
+	width:100%;
+}
+div.display-wrapper ul.dislist div.commentLove-wrapper{
+	position: absolute;
+	width:80px;
+	height:30px;
+	top:5px;
+	right:40px;
+}
+div.display-wrapper ul.dislist div.commentLove-wrapper span{
+	font-size: 14px;
+	color:gray;
+	cursor: pointer;
+}
+div.display-wrapper ul.dislist div.commentLove-wrapper span.clicked{
+	color:#008EE8;
+}
+div.display-wrapper ul.dislist div.commentLove-wrapper span#commentDislike{
+	margin-left: 10px;
+}
+
+/*评论回复区(2019.12.17)*/
+div.commentInfo-wrapper div.commentReply-wrapper{
+
+}
+div.commentInfo-wrapper div.commentReply-wrapper span{
+	color:gray;
+	font-size: 13px;
+}
+div.replyToggle-wrapper{
+	cursor: pointer;
+}
+
+div.commentInfo-wrapper div.commentReply-wrapper div.reply-list{
+	display:none;
+	width:100%;
+	margin:6px 0px 10px;
+}
+div.commentInfo-wrapper div.commentReply-wrapper div.reply-list ul{
+	width: 100%;
+	list-style: none;
+	padding-bottom: 5px;
+}
+div.commentInfo-wrapper div.commentReply-wrapper div.reply-list ul li{
+	position: relative;
+	width: 100%;
+}
+div.replyInfo-wrapper{
+	width:100%;
+	height:50px;
+}
+div.replyUser-wrapper{
+	width:100%;
+}
+div.replyUser-wrapper img{
+	width:28px;
+	hight:28px;
+	border-radius: 50%;
+	margin-right:5px;
+}
+div.replyContent-wrapper p{
+	font-size: 15px;
+	padding-left: 35px;
+}
+div.addNewReply-wrapper{
+	width:100%;
+	height:40px;
+}
+div.replyBtn-wrapper{
+	display: none;
+	position: absolute;
+	right: 5px;
+	top:12px;
+	cursor: pointer;
+}
+div.addNewReply-wrapper input{
+	display:inline-block;
+	width:85%;
+}
+div.addNewReply-wrapper button[name='replySend-btn']{
+	display: inline-block;
+	width:60px;
+	height: 35px;
+	font-size: 14px;
+	cursor: pointer;
+	border-radius: 4px;
+	background-color:#f1f2f3;
+	color:#c8cdd2;
+	margin-left:6px;
+	text-align: center;
+	opacity: 0.8;
+	cursor: not-allowed;
+}

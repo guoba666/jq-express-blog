@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-weight: normal;
+    vertical-align: baseline;
+    outline: none;
+}
+div[name='flex-box']{
+	background-color:#F0EBE6;
+}
+
+/*以下是对topDiv的布局*/
+div#topDiv{
+	width:103%;
+	height:60px;
+	margin-left:-2%;
+	background-color:white;
+}
+div#topDiv span{
+	font-size: 25px;
+	font-weight: bold;
+	margin-left:10%;
+	line-height: 55px;
+}
+div#underDiv{
+	width:1300px;  /*这里改成固定的像素大小可以防止缩放页面时li的布局错乱*/
+	height: 100%;
+	margin: 25px auto;
+	background-color:transparent;
+}
+
+/*以下是对leftDiv的布局*/
+div#leftDiv{
+	display: inline-block;
+	width:65%;
+	background-color:white;
+	float: left;
+	margin-right:10px;
+}
+div#rightDiv{
+	display: inline-block;
+	width:30%;
+	height:300px;
+	background-color:white;
+	float: left;
+}
+ul.list{
+	list-style: none;
+}
+ul.list li{
+	padding:0px 16px;
+	height: 83px;
+	display: flex;
+	align-items: baseline;
+	justify-content: flex-start;
+	cursor: pointer;
+}
+ul.list li div.replyIcon-div{
+	width:50px;
+}
+ul.list li div.replyIcon-div p[name='icon']{
+	text-align: center;
+	display: inline-block;
+	background:url(../img/p-normal.png) no-repeat 50%/100% 100%;
+	width:45px;
+	line-height: 30px;
+}
+ul.list li div.replyIcon-div p.hot{
+	color: #008ee8;
+}
+ul.list li div.contentInfo-div{
+	width:75%;
+	margin: 0px 25px;
+}
+ul.list li div.contentInfo-div h3 span{
+	display: inline-block;
+	font-size: 16px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	padding: 8px;
+}
+ul.list li div.contentInfo-div h3 span.title{
+	vertical-align: middle;
+	font-weight:bold;
+	transition: all .3s cubic-bezier(.24,.01,.24,1);
+}
+ul.list li div.contentInfo-div h3 p{
+	display: inline-block;
+	width:609px;
+	font-size: 14px;
+	color:#8c9196;
+	white-space:nowrap;
+	text-overflow: ellipsis;
+	margin-top:6px;
+	overflow: hidden;
+}
+ul.list li div.sendInfo-div{
+	margin-left:10px;
+	width:20%;
+	/*height:50px;*/
+	margin-top:10px;
+}
+ul.list li div.sendInfo-div h4{
+	width: 100%;
+    height: 20px;
+    font-weight: 400;
+	display: flex;
+}
+ul.list li div.sendInfo-div h4 img{
+	width: 25px;
+    height: 25px;
+    border-radius: 50%;
+	vertical-align: top;
+}
+ul.list li div.sendInfo-div h4 span{
+	height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    width: 97px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #8c9196;
+    font-size: 13px;
+	margin-left:6px;
+	vertical-align: top;
+}
+ul.list li div.sendInfo-div span{
+	height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    width: 97px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #8c9196;
+    font-size: 13px;
+	margin-left:6px;
+	margin-top:4px;
+}
+
+/*以下是对rightDiv的布局*/
+div#rightDiv div.img-div{
+	width:100%;
+	height:120px;
+	text-align: center;
+	vertical-align: center;
+}
+div#rightDiv div.img-div img{
+	margin-top: 30px;
+	width:90px;
+	height:90px;
+}
+div#rightDiv h3{
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+}
+div#rightDiv div.btn-div{
+	margin-top:25px;
+	width: 100%;
+	height: 60px;
+	text-align: center;
+}
+div#rightDiv div.btn-div button.rightDiv-btn{
+	width:100px;
+	height: 40px;
+	font-size: 15px;
+	cursor: pointer;
+	border-radius: 4px;
+}
+div#rightDiv div.btn-div span{
+	font-weight: bold;
+}
+div#rightDiv div.btn-div button[name='subscribe']{
+	background-color:#f1f2f3;
+	color:black;
+	font-weight: bold;
+}
+div#rightDiv div.btn-div button[name='post']{
+	background-color: #008ee8;
+	color:white;
+	margin-left: 20px;
+}

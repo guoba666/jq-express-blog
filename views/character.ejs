@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>character</title>
+		<script src="../public/gstory/js/posthero[0].js">
+			
+		</script>
+		<style type="text/css">
+			body{
+				margin: 0px;
+				background:url("./../../gstory/img/ahintro/<%=hero[0].pic%>.jpg")no-repeat ;
+				background-size:100% ;
+			
+			}
+		
+			.left{
+				margin-left: 150px;
+				float: left;
+				width: 500px;
+				height: 300px;
+				display: inline-flex;
+			}
+			.right{
+				margin-top: 78px;
+				margin-left: 200px;
+				width: 538px;
+				height: 540px;
+				float: left;
+				display: inline;
+				position: fixed;	
+			}
+			div.right h1{
+				font:40px seravek-web;
+			}
+			div.right h5{
+				font:16px seravek-web;
+			}
+			div.right p{
+				font: 20px seravek-web;
+				margin-buttom: 50px;
+			}
+			.text{
+				width:104px;
+				height: 36px;
+				font:20px seravek-web;
+				font-weight: 700;
+				display: inline;
+			}
+			span{
+				margin-left:30px;
+				font:20px red;
+				color:red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="content">
+			<div class="left"></div>
+			<div class="right">
+				<h1><%=hero[0].name %></h1>
+				<h5><%=hero[0].litname %></h2>
+				<p><%=hero[0].story %></p>
+				</br>		
+					<div class="text">真實名字</div><span><%=hero[0].truename %>	</span></br>
+					<div class="text">年齡&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</div><span> <%=hero[0].age %>	</span></br>
+					<div class="text">家園&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </div><span><%=hero[0].homeland %>	</span></br>
+					<div class="text">戰術技能</div><span>	<%=hero[0].Qskill %></span></br>
+					<div class="text">被動技能</div><span>	<%= hero[0].Bskill %></span></br>
+					<div class="text">終極技能</div><span>	<%= hero[0].Zskill %></span></br>
+			</div>
+		</div>
+
+	</body>
+</html>

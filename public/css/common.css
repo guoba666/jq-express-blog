@@ -1,0 +1,158 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-weight: normal;
+	vertical-align: baseline;
+	outline: none;
+}
+/*
+body{
+	background: url("../img/background.jpg") no-repeat;
+	background-size: 100%;
+}
+ */
+div[name='flex-box']{
+	background-color:#F0EBE6;
+	padding:0px;
+}
+div#showNav{
+	position: absolute;
+	top:40%;
+}
+div#leftNav{
+	width: 200px;
+	height: 100%;
+	position: fixed;
+	left: 0px;
+	background-color: black;
+	text-align: center;
+	transition: all 0.8s;
+	z-index: 1;
+}
+div#leftNav.sleep{
+	left:-205px;
+	transition: all 0.8s;
+}
+div#leftNav img#userHead{
+	width:50px;
+	height:50px;
+	border-radius: 50px;
+	margin:50px auto 30px;
+}
+div#leftNav span#nav-username{
+	display: block;
+	width:200px;
+	height:30px;
+	text-align:center;
+	color:white;
+	font-size:18px;
+}
+div#leftNav ul{
+	margin-top:35px;
+}
+div#leftNav li{
+	list-style: none;
+	margin:0px auto;
+	padding: 20px;
+	text-align: center;
+}
+div#leftNav li a{
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	cursor: pointer;
+}
+div#leftNav li a:hover{
+	color:aqua;
+}
+div#leftNav button#toggleNav{
+	display: none;
+	position: absolute;
+	right:-40px;
+}
+div[name='flex-box']{
+	margin-left:200px;
+	width:87%;
+	height:100%;
+	transition: all 0.8s;
+}
+div[name='flex-box'].moveRight{
+	margin-left:0px;
+	width:100%;
+	transition: all 0.8s;
+}
+div#topDiv{
+	width:103%;
+	height:60px;
+	margin-left:-2%;
+	background-color:white;
+}
+
+/*以下是对topDiv的布局*/
+div#topDiv h3{
+	width:50%;
+	display: inline-block;
+	font-size: 25px;
+	font-weight: bold;
+	margin-left:10%;
+	line-height: 20px;
+}
+div#underDiv{
+	width:1300px;  /*这里改成固定的像素大小可以防止缩放页面时li的布局错乱*/
+	height: 100%;
+	margin: 25px auto;
+	background-color:transparent;
+}
+/*以下是对leftDiv的布局*/
+div#leftDiv{
+	display: inline-block;
+	width:65%;
+	background-color:white;
+	float: left;
+	margin-right:10px;
+	
+}
+div#rightDiv{
+	display: inline-block;
+	width:30%;
+
+	background-color:white;
+	float: left;
+}
+div[name='operator-successInfo']{
+	position: fixed;
+	width:270px;
+	height:30px;
+	left: 45%;
+	top:-32px;
+	background-color: #C9E2B3;
+	border-radius: 12px;
+	text-align: center;
+	line-height: 28px;
+	color:#00A600;
+	font-size: 16px;
+	transition: all 0.5s;
+	z-index: 10;
+}
+div[name='operator-failInfo']{
+	position: fixed;
+	width:270px;
+	height:30px;
+	left: 45%;
+	top:-32px;
+	background-color:#e77f67;
+	border-radius: 12px;
+	text-align: center;
+	line-height: 28px;
+	color:white;
+	font-size: 16px;
+	transition: all 0.5s;
+	z-index: 10;
+}
+div[name^='operator-'].active{
+	top:20%;
+	transition: all 0.5s;
+}

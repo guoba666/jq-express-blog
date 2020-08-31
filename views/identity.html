@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery.min.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script src="js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/identity.css" />
+		<script src="js/identity.js"></script>
+	</head>
+	<body>
+		<div id="nav"></div>
+		<div name="operator-successInfo">
+			<span class="glyphicon glyphicon-ok-sign"></span>
+		</div>
+		<div name="operator-failInfo">
+			<span class="glyphicon glyphicon-remove-sign"></span>
+		</div>
+		<!-- 模态框（Modal） -->
+		<div class="modal fade" id="changePwd-wrapper" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+							&times;
+						</button>
+						<h4 class="modal-title" id="myModalLabel">
+							修改密码
+						</h4>
+					</div>
+					<div class="modal-body">
+						<div style="position: relative">
+							<span>原密码</span>
+							<input type="password" name="currentPwd"/>
+						</div>
+						<div style="position: relative">
+							<span>新密码</span>
+							<input type="password" name="newPwd"/>
+						</div>
+						<div style="position: relative">
+							<span>再次输入新密码</span>
+							<input type="password" name="confirmPwd"/>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+						</button>
+						<button type="button" class="btn btn-primary" id="confirmChangePwd-btn" data-dismiss="modal">
+							确认修改
+						</button>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal -->
+		</div>
+		<div class="container" name="flex-box" style="position:relative;">
+			<div id="topDiv">
+				<h3>个人中心</h3>
+				<div class="topDiv-btn">
+					<button id="changePwd-btn" data-toggle="modal" data-target="#changePwd-wrapper">修改密码</button>
+					<button id="backup-btn">退出登陆</button>
+				</div>
+			</div>
+			<div id="underDiv">
+				<div id="leftDiv">
+					<div id="info-nav">
+						<ul class="identityUl-wrapper">
+							<li>
+								<p class="active">发帖</p>
+								<div class="nav-line active"></div>
+							</li>
+							<li>
+								<p>回复</p>
+								<div class="nav-line"></div>
+							</li>
+							<li>
+								<p>收藏</p>
+								<div class="nav-line"></div>
+							</li>
+							<li>
+								<p>草稿</p>
+								<div class="nav-line"></div>
+							</li>
+						</ul>
+					</div>
+					<div id="show-list">
+						<ul>
+					
+						</ul>
+					</div>
+				</div>
+				<div id="rightDiv">
+					<div class="setting_wrapper">
+						<img src="img/guoba.jpg">
+						<button class="changeHead-btn">更换头像</button>
+						<input type="file" id="userHead-input" style="display: none;"/>
+					</div>
+					<p name="identity-username">锅巴</p>
+					<div class="followAfans_wrapper">
+						<p>关注</p>
+						<span id="follow-count">14</span>
+						<p>粉丝</p>
+						<span id="fans-count">14</span>
+					</div>
+				</div>
+			</div>
+			<div class="followAndFans-wrapper">
+				<div class="close-wrapper">
+					<span class="glyphicon glyphicon-remove"></span>
+				</div>
+				<div class="search-wrapper" style="position:relative;">
+					<span class="glyphicon glyphicon-search"></span>
+					<input type="text" placeholder="输入您所要查找的用户名">
+				</div>
+				<ul class="identityUl-wrapper">
+					<li>
+						<p class="active">关注</p>
+						<div class="nav-line active"></div>
+					</li>
+					<li>
+						<p>粉丝</p>
+						<div class="nav-line"></div>
+					</li>
+				</ul>
+				<div class="FAdisArea-wrapper">
+					<ul id="followDiv">
+						<!--
+						<li>
+							<img src="userHead/guoba.jpg">
+							<span>锅巴</span>
+							<button>已关注</button>
+						</li>
+						<li>
+							<img src="userHead/guoba.jpg">
+							<span>锅巴</span>
+							<button>已关注</button>
+						</li>
+						-->
+					</ul>
+					<ul id="fansDiv">
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		$("div#nav").load("html/nav.html");
+	</script>
+</html>

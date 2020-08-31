@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>1</title>
+		<link rel="stylesheet" type="text/css" href="yt/zs-css.css"/>
+		<script src="yt/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("ul").mouseover(function(){
+				
+					$("#div01-lidiv").slideDown();
+					});
+				$("ul").mouseleave(function(){
+					$("#div01-lidiv").slideUp();
+					})
+				$("#div01-lidiv").mouseover(function(){
+					$("#div01-lidiv").stop();
+				})
+				$("#div01-lidiv").mouseleave(function(){
+					$("#div01-lidiv").slideUp();
+				})
+				$("#d02b").click(function(){
+					alert("充钱啊充钱!!!不充钱怎么变强!!!!");
+				});
+				
+				$("#sushe").click(function(){
+					alert("还没做出来哈");
+				});
+			});
+	
+		</script>
+	</head>
+	<body>
+		<div id="header" class="header" >
+			<ul >
+				<li><a href="community">社区</a></li>
+				<li><a href="zs2">游戏角色</a></li>
+				<li><a href="zs4">攻略</a></li>
+				<li><a href="zs3">联系我们</a></li>
+			</ul>
+		</div>
+		
+		<div id="div01-lidiv" class="div01-lidiv">
+			<table border="0px" cellspacing="0px" cellpadding="10px">
+				<tr height="50px">
+					<td width="150px"></td>
+					<td width="150px"><a href="zs2">露西亚</a></td>
+					<td width="150px"><a href="zs4">关卡介绍</a></td>
+					<td width="150px"><a href="zs3">客服咨询</a></td>
+				</tr>
+				<tr height="50px">
+					<td></td>
+					<td><a href="zs2">丽芙</a></td>
+					<td><a href="zs4">资源副本</a></td>
+					<td><a href="zs3">BUG提交</a></td>
+				</tr>
+				<tr height="50px">
+					<td></td>
+					<td><a href="zs2">里</a></td>
+					<td><a href="zs4">剧情介绍</a></td>
+					<td><a href="zs3">喷喷策划</a></td>
+				</tr>
+				<tr height="50px">
+					<td></td>
+					<td><a href="zs2">比安卡</a></td>
+					<td id="sushe">宿舍系统</td>
+				</tr>
+				<tr height="50px">
+					<td></td>
+					<td><a href="zs2">七实</a></td>
+				</tr>
+			</table>
+		</div>
+		
+		<div id="div01" class="div01">
+			<video src="img/video1.mp4" autoplay="autoplay"
+			 muted="muted" loop="loop" id="video">
+			</video>
+			<img src="img/jiantou.png" alt class="div01img" id="img01">
+		</div>
+		
+		<div id="div02">
+			<center><input type="button" name="" id="d02b" value="戳我变强QAQ" /></center>
+		</div>
+		
+		<div id="div03">
+			<center>
+				<p>本公司游戏产品适合16岁（含）以上玩家娱乐</p>
+				<p>抵制不良游戏 拒绝盗版游戏</p>
+				<p>注意自我保护 谨防受骗上当</p>
+				<p>适度游戏益脑 沉迷游戏伤身</p>
+				<p>合理安排时间 享受健康生活</p>
+				<p>邮箱：123456789@qq.com</p>
+			</center>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,390 @@
+table.table{
+	width: 100%;
+}
+
+table.table img{
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+}
+
+table.table tbody td{
+	line-height: 20px;
+}
+
+table.table tbody td button{
+	width: 50px;
+	height: 30px;
+	display: inline-block;
+	margin-left: 2px;
+	color: #409eff;
+	border-radius: 5%;
+	background: transparent;
+	transition: .3s;
+}
+
+/* table.table tbody td button:hover{
+	background: #dfe6e9;
+} */
+
+
+table.table thead tr th:last-child{
+	width: 21%;
+}
+
+table.table tbody tr td:nth-child(3){
+	line-height: 27px;
+}
+
+table.table tbody tr td:nth-child(4){
+	line-height: 27px;
+}
+
+table.table thead tr th:first-child{
+	width: 20%;
+}
+
+
+div#cendiv{
+	display: inline-block;
+	width:74%;
+	background-color:white;
+	/* float: left; */
+	margin-right:10px;
+	text-align: center;
+}
+
+a.navbar-brand{
+	margin-left: 2%;
+}
+
+nav.navbar{
+	width: 99%;
+	margin-left: 13px;
+	background-color: #333;
+}
+
+
+div.del-tie{
+	line-height: 80px;
+	width: 20%;
+	background-color: white;
+	display: inline-block;
+	vertical-align: text-top;
+	text-align: center;
+	z-index: 10;
+	transition: 0.4s;
+}
+
+div.del-tie:hover{
+	background-color:#8395a7;
+	color: white;
+	z-index: 10;
+}
+
+
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-weight: normal;
+	vertical-align: baseline;
+	outline: none;
+}
+/*
+body{
+	background: url("../img/background.jpg") no-repeat;
+	background-size: 100%;
+}
+ */
+div[name='flex-box']{
+	background-color:#F0EBE6;
+
+}
+div#showNav{
+	position: absolute;
+	top:40%;
+}
+div#leftNav{
+	width: 200px;
+	height: 100%;
+	position: fixed;
+	left: 0px;
+	background-color: black;
+	text-align: center;
+	transition: all 0.8s;
+	z-index: 1;
+}
+div#leftNav.sleep{
+	left:-205px;
+	transition: all 0.8s;
+}
+div#leftNav img#userHead{
+	width:50px;
+	height:50px;
+	border-radius: 50px;
+	margin:50px auto 30px;
+}
+div#leftNav span#nav-username{
+	display: block;
+	width:200px;
+	height:30px;
+	text-align:center;
+	color:white;
+	font-size:18px;
+}
+div#leftNav ul{
+	margin-top:35px;
+}
+div#leftNav li{
+	list-style: none;
+	margin:0px auto;
+	padding: 20px;
+	text-align: center;
+}
+div#leftNav li a{
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	cursor: pointer;
+}
+div#leftNav li a:hover{
+	color:aqua;
+}
+div#leftNav button#toggleNav{
+	display: none;
+	position: absolute;
+	right:-40px;
+}
+div[name='flex-box']{
+	margin-left:200px;
+	width:87%;
+	height:100%;
+	transition: all 0.8s;
+}
+div[name='flex-box'].moveRight{
+	margin-left:0px;
+	width:100%;
+	transition: all 0.8s;
+}
+div#topDiv{
+	width:103%;
+	height:60px;
+	margin-left:-2%;
+	background-color:white;
+}
+
+/*以下是对topDiv的布局*/
+div#topDiv h3{
+	width:50%;
+	display: inline-block;
+	font-size: 25px;
+	font-weight: bold;
+	margin-left:10%;
+	line-height: 0px;
+}
+div#underDiv{
+	width:1300px;  /*这里改成固定的像素大小可以防止缩放页面时li的布局错乱*/
+	height: 100%;
+	margin: 25px auto;
+	background-color:transparent;
+}
+/*以下是对leftDiv的布局*/
+div#leftDiv{
+	display: inline-block;
+	width:74%;
+	background-color:white;
+	/* float: left; */
+	margin-right:10px;
+}
+div#rightDiv{
+	display: inline-block;
+	width:30%;
+	height:300px;
+	background-color:white;
+	/* float: left; */
+}
+div[name='operator-successInfo']{
+	position: fixed;
+	width:270px;
+	height:30px;
+	left: 45%;
+	top:-32px;
+	background-color: #C9E2B3;
+	border-radius: 12px;
+	text-align: center;
+	line-height: 28px;
+	color:#00A600;
+	font-size: 16px;
+	transition: all 0.5s;
+	z-index: 10;
+}
+div[name='operator-failInfo']{
+	position: fixed;
+	width:270px;
+	height:30px;
+	left: 45%;
+	top:-32px;
+	background-color:darkgray;
+	border-radius: 12px;
+	text-align: center;
+	line-height: 28px;
+	color:red;
+	font-size: 16px;
+	transition: all 0.5s;
+	z-index: 10;
+}
+div[name^='operator-'].active{
+	top:20%;
+	transition: all 0.5s;
+}
+
+
+
+
+ul.list{
+	list-style: none;
+}
+ul.list li{
+	padding:0px;
+	display: flex;
+	align-items: baseline;
+	justify-content: flex-start;
+	cursor: pointer;
+	height: 80px;
+	transition: 0.4s;
+}
+ul.list li:hover{
+	background-color: #dfe6e9;
+}
+
+ul.list li div.replyIcon-div{
+	width:50px;
+}
+ul.list li div.replyIcon-div p[name='icon']{
+	text-align: center;
+	display: inline-block;
+	background:url(../img/p-normal.png) no-repeat 50%/100% 100%;
+	width:45px;
+	line-height: 30px;
+}
+ul.list li div.replyIcon-div p.hot{
+	color: #008ee8;
+}
+ul.list li div.contentInfo-div{
+	width:75%;
+	margin: 0px 25px;
+}
+ul.list li div.contentInfo-div h3 span{
+	display: inline-block;
+	font-size: 16px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	padding: 8px;
+}
+ul.list li div.contentInfo-div h3 span.title{
+	vertical-align: middle;
+	font-weight:bold;
+	transition: all .3s cubic-bezier(.24,.01,.24,1);
+}
+ul.list li div.contentInfo-div h3 p{
+	display: inline-block;
+	width:609px;
+	font-size: 14px;
+	color:#8c9196;
+	white-space:nowrap;
+	text-overflow: ellipsis;
+	margin-top:6px;
+	overflow: hidden;
+}
+ul.list li div.sendInfo-div{
+	margin-left:0;
+	width:20%;
+	/*height:50px;*/
+	margin-top:10px;
+}
+ul.list li div.sendInfo-div h4{
+	width: 100%;
+    height: 20px;
+    font-weight: 400;
+	display: flex;
+}
+ul.list li div.sendInfo-div h4 img{
+	width: 25px;
+    height: 25px;
+    border-radius: 50%;
+	vertical-align: top;
+}
+ul.list li div.sendInfo-div h4 span{
+	height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    width: 97px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #8c9196;
+    font-size: 13px;
+	margin-left:6px;
+	vertical-align: top;
+}
+ul.list li div.sendInfo-div span{
+	height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    width: 97px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #8c9196;
+    font-size: 13px;
+	margin-left:6px;
+	margin-top:4px;
+}
+
+/*以下是对rightDiv的布局*/
+div#rightDiv div.img-div{
+	width:100%;
+	height:120px;
+	text-align: center;
+	vertical-align: center;
+}
+div#rightDiv div.img-div img{
+	margin-top: 30px;
+	width:90px;
+	height:90px;
+}
+div#rightDiv h3{
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+}
+div#rightDiv div.btn-div{
+	margin-top:25px;
+	width: 100%;
+	height: 60px;
+	text-align: center;
+}
+div#rightDiv div.btn-div button.rightDiv-btn{
+	width:100px;
+	height: 40px;
+	font-size: 15px;
+	cursor: pointer;
+	border-radius: 4px;
+}
+div#rightDiv div.btn-div span{
+	font-weight: bold;
+}
+div#rightDiv div.btn-div button[name='subscribe']{
+	background-color:#f1f2f3;
+	color:black;
+	font-weight: bold;
+}
+div#rightDiv div.btn-div button[name='post']{
+	background-color: #008ee8;
+	color:white;
+	margin-left: 20px;
+}

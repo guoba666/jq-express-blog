@@ -1,0 +1,283 @@
+div#info-nav{
+	width:100%;
+	height:35px;
+	box-sizing: border-box;
+}
+ul.identityUl-wrapper{
+	list-style: none;
+}
+ul.identityUl-wrapper li{
+	position: relative;
+	float: left;
+	padding: 0px 30px;
+}
+ul.identityUl-wrapper li div.nav-line{
+	position: absolute;
+	width:0px;
+	height:3px;
+	top:30px;
+	background-color: black;
+	left: 27px;
+}
+ul.identityUl-wrapper li div.nav-line.active{
+	width:36px;
+	transition: all 0.6s;
+}
+ul.identityUl-wrapper li p{
+	font-size: 16px;
+	font-weight: 600;
+	color:gray;
+	line-height: 25px;
+	margin: 0px;
+	cursor: pointer;
+}
+ul.identityUl-wrapper li p.active{
+	color:black;
+}
+div#show-list{
+	width:100%;
+	height:600px;
+}
+div#show-list ul{
+	margin-top: 25px;
+	list-style: none;
+	font-family: "Roboto", sans-serif;
+}
+div#show-list ul li{
+	cursor: pointer;
+	padding:12px 0px 12px 35px;
+	border-bottom: 1px solid gainsboro;
+}
+div#show-list ul li p{
+	font-size: 13px;
+	color:gray;
+}
+div#show-list ul li h3{
+	font-size: 18px;
+	margin: 0px;
+	font-weight: 600;
+}
+div#show-list ul li h3:hover{
+	color:#008EE8;
+}
+div#show-list ul li div.feedback-wrapper{
+	margin-top: 15px;
+	color:gray;
+}
+div#show-list ul li div.feedback-wrapper span{
+	margin:0px 10px;
+}
+div#rightDiv div.setting_wrapper{
+	position: relative;
+	width: 100%;
+	text-align: center;
+}
+div#rightDiv div.setting_wrapper img{
+	margin-top: 20px;
+	height: 120px;
+	width: 120px;
+	border-radius:50%;
+	border: 1px solid gray;
+	cursor: pointer;
+}
+div#rightDiv div.setting_wrapper img.dark{
+	 filter: blur(2px);
+	 opacity: 0.6;
+}
+div#rightDiv div.setting_wrapper button.changeHead-btn{
+	display: none;
+	position: absolute;
+	top:45%;
+	left: 42%;
+	color: black;
+	font-weight: bold;
+	font-size: 16px;
+	background-color: transparent;
+}
+div#rightDiv p{
+	font-size: 17px;
+	color:black;
+	text-align: center;
+	margin-top: 20px;
+}
+div#rightDiv div.followAfans_wrapper{
+	text-align: center;
+}
+div#rightDiv div.followAfans_wrapper p{
+	display: inline-block;
+	color:gray;
+}
+div#rightDiv div.followAfans_wrapper span{
+	font-size: 15px;
+	color:gray;
+	margin-right: 10px;
+}
+
+/*cb*/
+div#show-list ul li button{
+	float: right;
+	width: 60px;
+	height: 26px;
+	border-radius: 5%;
+	margin-right: 60px;
+	z-index: 1;
+	border: none;
+}
+div#show-list ul li button:hover{
+	background: #b2bec3;
+	transition: .3s;
+}
+
+/*按钮*/
+div#topDiv div.topDiv-btn{
+	display: inline-block;
+	width:300px;
+	position: absolute;
+	top:13px;
+	right: 50px;
+}
+div#topDiv div.topDiv-btn button#changePwd-btn{
+	width:100px;
+	height: 35px;
+	font-size: 15px;
+	cursor: pointer;
+	border-radius: 4px;
+	background-color: #f1f2f3;
+	color:black;
+	font-weight: bold;
+}
+div#topDiv div.topDiv-btn button#changePwd-btn:hover{
+	background-color: #00B7FF;
+	color: white;
+}
+div#topDiv div.topDiv-btn button#backup-btn{
+	display: inline-block;
+	width:100px;
+	height: 35px;
+	font-size: 15px;
+	cursor: pointer;
+	border-radius: 4px;
+	background-color: #f1f2f3;
+	color:black;
+	font-weight: bold;
+	margin-left: 15px;
+}
+div#topDiv div.topDiv-btn button#backup-btn:hover{
+	color:white;
+	background-color: red;
+}
+div#changePwd-wrapper span{
+	position: absolute;
+	top:50px;
+	left:48px;
+	color:gray;
+	font-weight:600;
+	transition: all 0.4s;
+}
+div#changePwd-wrapper span.active{
+	top:16px;
+	transition: all 0.4s;
+}
+div#changePwd-wrapper input{
+	width:500px;
+	height:40px;
+	border:2px solid gray;
+	border-radius: 10px;
+	margin: 40px 0px 5px 25px;
+	padding-left: 20px;
+	color:black;
+}
+div.followAndFans-wrapper{
+	display: none;
+	position: absolute;
+	left:28%;
+	top:20%;
+	width: 500px;
+	height:400px;
+	overflow: auto;
+	border:2px solid #0b0b0b;
+	border-radius: 4px;
+	background-color:white;
+}
+div.close-wrapper{
+	width:30px;
+	height:20px;
+	cursor:pointer;
+}
+div.followAndFans-wrapper span.glyphicon.glyphicon-remove{
+	position: absolute;
+	top:5px;
+	right:5px;
+	cursor:pointer;
+	font-size: 20px;
+	color:red;
+	width:20px;
+}
+div.search-wrapper{
+	width: 100%;
+	height:40px;
+	padding:5px 20px;
+	margin-bottom: 10px;
+}
+div.search-wrapper span{
+	display: inline-block;
+	position: absolute;
+	width:20px;
+	height:100%;
+	font-size: 16px;
+	top:16px;
+	left:28px;
+}
+div.search-wrapper input{
+	display: inline-block;
+	width:80%;
+	height:100%;
+	padding-left:30px;
+	background-color:#EEEEE0;
+	border-radius: 4px;
+	margin-top: 5px;
+}
+div.FAdisArea-wrapper{
+	width:100%;
+	margin-top: 60px;
+	padding:10px 15px 0px 15px;
+}
+ul#followDiv{
+	display: block;
+	width: 100%;
+	list-style: none;
+}
+ul#fansDiv{
+	display: none;
+	width: 100%;
+	list-style: none;
+}
+
+ul#followDiv li{
+	margin-bottom: 15px;
+}
+ul#followDiv img{
+	display: inline-block;
+	width:30px;
+	height:30px;
+	border-radius: 50%;
+}
+ul#followDiv button{
+	float: right;
+	padding:4px;
+	border-radius: 4px;
+}
+ul#fansDiv li{
+	margin-bottom: 15px;
+}
+ul#fansDiv img{
+	display: inline-block;
+	width:30px;
+	height:30px;
+	border-radius: 50%;
+}
+ul#fansDiv button{
+	float: right;
+	padding:4px;
+	border-radius: 4px;
+}

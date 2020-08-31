@@ -1,0 +1,14 @@
+$(function(){
+	$("div.container").on("mouseenter","div[name='game-card']",function(){
+		$(this).find("img").addClass("dark");
+		$(this).find("div.line-top").addClass("active");
+		$(this).find("div.line-bottom").addClass("active");
+		$(this).find("div[name='hide_div']").fadeIn();
+	})
+	$("div.container").on("mouseleave","div[name='game-card']",function(){
+		$(this).find("img").removeClass("dark");
+		$(this).find("div.line-top").removeClass("active");
+		$(this).find("div.line-bottom").removeClass("active");
+		$(this).find("div[name='hide_div']").hide();
+	})
+})

@@ -1,0 +1,157 @@
+div#topDiv div.topDiv-btn{
+	display: inline-block;
+	width:300px;
+}
+div#topDiv div.topDiv-btn button#saveContent-btn{
+	width:100px;
+	height: 35px;
+	font-size: 15px;
+	cursor: pointer;
+	border-radius: 4px;
+	background-color: #f1f2f3;
+	color:black;
+	font-weight: bold;
+}
+div#topDiv div.topDiv-btn button#saveContent-btn:hover{
+	color:#008ee8;
+}
+div#topDiv div.topDiv-btn button#post-btn{
+	display: inline-block;
+	width:70px;
+	height: 35px;
+	font-size: 15px;
+	cursor: pointer;
+	border-radius: 4px;
+	background-color: #008ee8;
+	color:white;
+	font-weight: bold;
+	margin-left: 15px;
+}
+div#topDiv div.topDiv-btn button#post-btn:hover{
+	color:black;
+}
+div#topDiv div.topDiv-btn button#clearAllContent-btn{
+	display: inline-block;
+	width:70px;
+	height: 35px;
+	font-size: 15px;
+	cursor: pointer;
+	border-radius: 4px;
+	background-color: red;
+	color:white;
+	font-weight: bold;
+	margin-left: 15px;
+}
+
+div.editor-div{
+	width: 100%;
+	height: 600px;
+	margin: 0px;
+	box-sizing: border-box;
+	padding: 20px 78px;
+	overflow: hidden;
+}
+div.editor-div div.title-input{
+	width: 100%;
+}
+div.editor-div div.title-input input{
+	width: 100%;
+	font-size: 21px;
+	font-weight: bold;
+}
+div.editor-div div.title-input p.byte-limit{
+	width: 100%;
+	line-height: 16px;
+	text-align: right;
+	font-size: 13px;
+}
+div.editor-div div.title-input p.byte-limit span.limit-word{
+	color:#008ee8;
+}
+div.editor-div div.content-input{
+	width:100%;
+	height:500px;
+	border:1px solid #ccc;
+}
+div.editor-div div.content-input div#edit-tool-div{
+	width:100%;
+	background-color:#f1f1f1;
+}
+div.editor-div div.content-input div#edit-tool-div button{
+	display: inline-block;
+	width:35px;
+	height:35px;
+	margin-left:2px;
+	background-color: transparent;
+	color:gray;
+}
+div.editor-div div.content-input div#edit-tool-div button span{
+	font-size: 13px;
+}
+div.editor-div div.content-input div#edit-tool-div button:hover{
+	color:black;
+}
+div.editor-div div.content-input div#edit-area{
+	width:100%;
+	height:450px;
+	overflow:auto;
+	padding:10px 15px;
+	font-size: 16px;
+}
+/*点击工具按钮时的状态*/
+div.editor-div div.content-input div#edit-tool-div button.using{
+	color:black;
+}
+
+/*限制图片上传的大小*/
+div#edit-area img{
+	width:200px;
+	height:200px;
+}
+
+/*工具弹出小div*/
+div.tool-litleDiv{
+	display: none;
+	position: absolute;
+	top:200px;
+	left: 25%;
+	width:250px;
+	height: 100px;
+	border: 1px solid gray;
+	padding-top:10px;
+	overflow: hidden;
+	text-align: right;
+}
+div.tool-litleDiv input{
+	margin-left: 25px;
+	margin-top: 5px;
+	display: block;
+	border: 1px solid gray;
+}
+div.tool-litleDiv input[name="hrefAddress"]{
+	color:#1e88e5;
+}
+div.tool-litleDiv button{
+	margin-right: 10px;
+}
+input#addPicture-input{
+	position: absolute;
+	display: none;
+}
+div#rightDiv div.img-div{
+	width:100%;
+	height:240px;
+	text-align: center;
+	vertical-align: center;
+}
+div#rightDiv div.img-div img{
+	margin-top: 30px;
+	width:180px;
+	height:180px;
+}
+div#rightDiv h3{
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
